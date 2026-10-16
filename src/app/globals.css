@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 226, 232, 240;
+  --background-start-rgb: 9, 11, 14;
+  --background-end-rgb: 15, 18, 23;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: #090b0e;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  overflow: hidden;
+}
+
+/* Custom sleek scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f1217;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2b3343;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3d475c;
+}
+
+/* Print Styles for Storyboard Exporter */
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+    overflow: visible !important;
+  }
+  header, nav, .no-print {
+    display: none !important;
+  }
+}
